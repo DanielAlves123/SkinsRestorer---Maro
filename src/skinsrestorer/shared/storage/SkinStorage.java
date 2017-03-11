@@ -25,6 +25,7 @@ public class SkinStorage {
 	private static File folder;
 	private static ExecutorService exe;
 	private static boolean isBungee;
+	private static Random random;
 
 	static {
 		try {
@@ -327,7 +328,7 @@ public class SkinStorage {
 		Object textures = getSkinData(skin);
 		if (textures == null) {
 			if (Config.DEFAULT_SKINS_ENABLED)
-				textures = getSkinData(Config.DEFAULT_SKINS.get(new Random().nextInt(Config.DEFAULT_SKINS.size())));
+				textures = getSkinData(Config.DEFAULT_SKINS.get(random.nextInt(Config.DEFAULT_SKINS.size())));
 
 		}
 		// Schedule skin update for next login
