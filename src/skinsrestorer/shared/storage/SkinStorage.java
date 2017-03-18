@@ -25,7 +25,7 @@ public class SkinStorage {
 	private static File folder;
 	private static ExecutorService exe;
 	private static boolean isBungee;
-	private static Random random;
+	private static Random random = new Random();
 
 	static {
 		try {
